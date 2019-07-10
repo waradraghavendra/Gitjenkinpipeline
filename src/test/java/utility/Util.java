@@ -38,14 +38,14 @@ public class Util {
 		 * 
 		 * driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dr);
 		 */
-		 //if(System.getProperty("Browser").equalsIgnoreCase("chrome")) {
+		 if(System.getProperty("Browser").equalsIgnoreCase("chrome")) {
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
-		//} 
-	/*
-	 * else { System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
-	 * driver = new FirefoxDriver(); }
-	 */
+		} 
+	
+	  else { System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+	  driver = new FirefoxDriver(); }
+	 
 		driver.get("https://www.github.com/");
 		System.out.println(driver.getTitle().toString());
 		
